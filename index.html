@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <title>UMLERAN Dribbble</title>
+</head>
+<body>
+    <div id="shots"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>// Set the Access Token
+        var accessToken = 'cd9f55e3ce5e34a11a6a026bcc84c6ccd1d7e985c298015b55037e105ee963f0';
+        
+        // Call Dribble v2 API
+        $.ajax({
+            url: 'https://api.dribbble.com/v2/user/shots?access_token='+accessToken,
+            dataType: 'json',
+            type: 'GET',
+            success: function(data) {  
+              if (data.length > 0) { 
+                $.each(data.reverse(), function(i, val) {                
+                  $('#shots').prepend(
+                    '<div class="shot" ><div class="title">' + val.title + ' <p class="Dridescription">' + val.description + ' </p></div><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"> <img src="'+ val.images.hidpi +'"/></a></div>'
+                    )
+                })
+              }
+              else {
+                $('#shots').append('<p>No shots yet!</p>');
+              }
+            }
+        });
+        
+        // API Variables
+        //Image width 800x600 (Animated)
+          // val.images.hidpi 
+        //Image width 400x300
+          // val.images.normal
+        //Image width 200x150
+          // val.images.teaser
+        //Title
+          // val.title
+        //Description
+          // val.description
+        //URL
+          // val.html_url
+    </script>
+</body>
+</html>
