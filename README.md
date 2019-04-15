@@ -1,5 +1,5 @@
 # Dribbble_API
-Get your latest dribbble shots and display it on personal website automaticly.  
+Get your latest dribbble shots and display it on personal website automatically.  
 [Demo Link](https://umlearn.tech/Dribbble_API/) 
 
 ### How to Use
