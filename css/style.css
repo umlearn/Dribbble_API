@@ -39,6 +39,7 @@ body {
 
 #DribbbleShots .shot .title {
   position: absolute;
+  z-index: 0;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -73,6 +74,8 @@ body {
 }
 
 #DribbbleShots .shot img {
+  position: relative;
+  z-index: 1;
   display: block;
   max-width: 100%;
   transition: opacity .1s ease-in-out;
