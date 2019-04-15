@@ -25,8 +25,9 @@ body {
 }
 
 .Divider a{
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
   color: #666;
   margin-left: auto;
   text-decoration: none;
@@ -34,9 +35,8 @@ body {
 }
 
 .Divider a:hover{
-  font-size: 18px;
-  font-weight: 400;
   color: #2396ff;
+  text-decoration: underline;
 }
 
 #DribbbleShots {
