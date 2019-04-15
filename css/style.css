@@ -29,6 +29,9 @@ body {
     visibility: hidden;
   }
 
+  #DribbbleShots .shot:hover img {
+    opacity: 1 !important;
+  }
 }
 #DribbbleShots .shot:hover img {
   opacity: 0.1;
