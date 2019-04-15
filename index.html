@@ -8,7 +8,7 @@
     <title>UMLERAN Dribbble</title>
 </head>
 <body>
-    <div id="shots"></div>
+    <div id="DribbbleShots"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>// Set the Access Token
         var accessToken = 'cd9f55e3ce5e34a11a6a026bcc84c6ccd1d7e985c298015b55037e105ee963f0';
@@ -21,8 +21,8 @@
             success: function(data) {  
               if (data.length > 0) { 
                 $.each(data.reverse(), function(i, val) {                
-                  $('#shots').prepend(
-                    '<div class="shot" ><div class="title">' + val.title + ' <p class="Dridescription">' + val.description + ' </p></div><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"> <img src="'+ val.images.hidpi +'"/></a></div>'
+                  $('#DribbbleShots').prepend(
+                    '<div class="shot" ><div class="title">' + val.title + '  ' + val.description + ' </div><a target="_blank" href="'+ val.html_url +'" title="' + val.title + '"> <img src="'+ val.images.hidpi +'"/></a></div>'
                     )
                 })
               }

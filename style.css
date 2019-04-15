@@ -7,62 +7,74 @@ body {
   font-size: 15px;
 }
 
-#shots {
+#DribbbleShots {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1024px;
+  max-width: 1240px;
   margin: auto;
 }
-#shots .shot {
+#DribbbleShots .shot {
   position: relative;
   display: block;
-  width: 25%;
-  color: white;
-  background-color: #2396ff;
+  width: 24.8%;
   text-decoration: none;
-
-
-}
-#shots .shot a {
-  color: white;
-  text-decoration: none;
+  margin: 1px;
 }
 
 @media only screen and (max-width: 779px) {
-  #shots .shot {
-    width: 50%;
+  #DribbbleShots .shot {
+    width: 49%;
   }
 }
-#shots .shot:hover img {
+#DribbbleShots .shot:hover img {
   opacity: 0.1;
 }
-#shots .shot:hover .title {
+#DribbbleShots .shot:hover .title {
   opacity: 1;
 }
 
-#shots .shot .title {
+#DribbbleShots .shot:hover .title p{
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+#DribbbleShots .shot .title {
   position: absolute;
-  width: calc(100% - 2rem);
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top:0px;
   padding: 24px;
+  color: white;
+  background-color: #2396ff;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: 1px;
+  transition: opacity .1s ease-in-out;
 }
-#shots .shot .title p {
+#DribbbleShots .shot .title p {
+  margin-top: 30px;
   font-size: 14px;
-  text-transform:uppercase;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  transition: margin-top .2s cubic-bezier(0,0,0.5,1);
 }
 
-#shots .shot img {
+#DribbbleShots .shot .title a {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+  color: white;
+}
+
+#DribbbleShots .shot img {
   display: block;
   max-width: 100%;
-  transition: opacity .2s ease-in-out;
-  border-style: solid ;
+  transition: opacity .1s ease-in-out;
+  /* border-style: solid ;
+  border-top-style: none;
   border-color: #f5f5f5;
-  border-width: 1px;
+  border-width: 1px; */
 }
