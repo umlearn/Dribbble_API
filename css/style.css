@@ -24,6 +24,11 @@ body {
   #DribbbleShots .shot {
     width: 50%;
   }
+
+  #DribbbleShots .shot .title{
+    visibility: hidden;
+  }
+
 }
 #DribbbleShots .shot:hover img {
   opacity: 0.1;
