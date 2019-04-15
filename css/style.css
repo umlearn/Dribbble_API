@@ -11,25 +11,26 @@ body {
 .Divider {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: auto;
   padding-top: 24px;
   padding-bottom: 16px;
 }
 
 .Divider .SecTitle{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #333;
   text-transform: uppercase;
 }
 
 .Divider a{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   color: #666;
   margin-left: auto;
+  margin-top: auto;
   text-decoration: none;
   transition: color 0.1s ease-in-out;
 }
@@ -40,23 +41,47 @@ body {
 }
 
 #DribbbleShots {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1280px;
-  margin: auto;
-  
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 4px;
+  max-width: 1200px;
+  justify-content: center;
+  margin: auto; 
 }
 #DribbbleShots .shot {
   position: relative;
   display: block;
-  width: 25%;
+  width: 100%;
   text-decoration: none;
   background: url(https://mat1.gtimg.com/www/mb/images/loading.gif) center center no-repeat !important;
+  margin: auto;
+  padding: 0.1%;
 }
-
 @media only screen and (max-width: 768px) {
-  #DribbbleShots .shot {
-    width: 50%;
+  #DribbbleShots {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-gap: 4px;
+    justify-content: center;
+    margin: auto; 
+  }
+
+  #DribbbleShots .shot .title{
+    visibility: hidden;
+  }
+
+  #DribbbleShots .shot:hover img {
+    opacity: 1 !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #DribbbleShots {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 4px;
+    max-width: 1280px;
+    justify-content: center;
+    margin: auto; 
   }
 
   #DribbbleShots .shot .title{
@@ -76,7 +101,7 @@ body {
 
 #DribbbleShots .shot:hover .title p{
   opacity: 0.8;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 #DribbbleShots .shot .title {
@@ -91,13 +116,13 @@ body {
   background-color: #2396ff;
   opacity: 0;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   transition: opacity .1s ease-in-out;
 }
 #DribbbleShots .shot .title p {
   margin-top: 30px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   opacity: 0;
   transition: opacity .2s ease-in-out;
@@ -119,7 +144,7 @@ body {
   position: relative;
   z-index: 1;
   display: block;
-  max-width: 100%;
+  width: 100%;
   transition: opacity .1s ease-in-out;
   z-index: 10;
 }
