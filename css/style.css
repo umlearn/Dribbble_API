@@ -22,7 +22,7 @@ body {
 
 @media only screen and (max-width: 779px) {
   #DribbbleShots .shot {
-    width: 49%;
+    width: 50%;
   }
 }
 #DribbbleShots .shot:hover img {
@@ -66,6 +66,10 @@ body {
   font-weight: 400;
   opacity: 0.9;
   color: white;
+}
+
+#DribbbleShots .shot a {
+  z-index: 15;
 }
 
 #DribbbleShots .shot img {
